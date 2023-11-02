@@ -12,15 +12,26 @@ function App() {
   const fahrenheit = 0;
   const kelvin = 0;
 
-  function onCelsiusChange(){
+  function onCelsiusChange(tempValue){
+    setTempObj({
+      scale: 'celsius',
+      temperature: isNaN(tempValue) ? 0 : tempValue,
+    });
 
   }
 
-  function onFahrenheitChange(){
+  function onFahrenheitChange(tempValue){
+    setTempObj({
+      scale: 'fahrenheit',
+      temperature: isNaN(tempValue) ? 0 : tempValue,
+    });
     
   }
-  function onKelvinChange(){
-    
+  function onKelvinChange(tempValue){
+    setTempObj({
+      scale: 'kelvin',
+      temperature: isNaN(tempValue) ? 0 : tempValue,
+    });
   }
 
   return (
